@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "Arduino_Code.ino",
+    "programmer": "ArduinoISP",
+    "port": "COM5"
+}
