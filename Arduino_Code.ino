@@ -143,25 +143,27 @@ void loadSchedule()
   // irr_seconds[2][0] = 20;
 
   fer_days[0][3] = 1;
-  // fer_days[1][3] = 1;
+  fer_days[1][3] = 1;
   // fer_days[2][3] = 1;
   //sets event at valve 0, at 7
   fer_hours[0][0] = 7;
-  // fer_hours[1][0] = 7;
+  fer_hours[1][0] = 7;
   // fer_hours[2][0] = 7;
   //sets event at valve 0, at minute 27
   fer_minutes[0][0] = 27;
-  // fer_minutes[1][0] = 27;
+  fer_minutes[1][0] = 27;
   // fer_minutes[2][0] = 27;
   //sets event at valve 0, at second X
   fer_seconds[0][0] = 10;
-  // fer_seconds[1][0] = 27;
+  fer_seconds[1][0] = 50;
   // fer_seconds[2][0] = 35;
   //set fertilization to a pump
   fer_pump[0][0] = 0;
+  fer_pump[1][0] = 1;
 
   //set fertilization duration 
   fer_duration[0][0] = 30;
+  fer_duration[1][0] = 30;
 
   irr_duration = 30;
 }
