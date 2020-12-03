@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Get Info</title>
+  </head>
+  <body>
+
+    <h1>Get the information that you want.</h1>
+    <ul>
+      <li><a href="/">Get Info</a></li>
+      <li><a href="/forms">Forms</a></li>
+      <li><a href="/geolocation">Geolocation</a></li>
+      <li><a href="/visit">Health Care Visit</a></li>
+      <li><a href="/doctor">Doctors</a></li>   
+    </ul>
+<hr>
+
+    
+    <form action="/" method="post">
+
+    <h1>What do you want to know?</h1>
+
+    <table style="width:100%">
+      <tr>
+      <!-- <div class="col"><strong>Name</strong></div> -->
+      <th class="col"><strong>PersonID</strong></th>
+      <th class="col"><strong>Name</strong></th>
+      <th class="col"><strong>Age</strong></th>
+      <th class="col"><strong>DoctorID</strong></th>
+      <th class="col"><strong>Doctor Name</strong></th>
+      <th class="col"><strong>DiseaseID</strong></th>
+      <th class="col"><strong>Disease</strong></th>
+      <th class="col"><strong>Symptom Name</strong></th>
+      <th class="col"><strong>Longitude</strong></th>
+      <th class="col"><strong>Latitude</strong></th>
+      <th class="col"><strong>Date and Time</strong></th>
+    </tr>
+    {{!-- Como se recibe dato de back a front --}}
+  
+    {{#each data}}
+    <tr>
+      <td class="col">{{this.personID}}</td>
+      <td class="col">{{this.Pname}}</td>
+      <td class="col">{{this.age}}</td>
+      <td class="col">{{this.doctorID}}</td>
+      <td class="col">{{this.Docname}}</td>
+      <td class="col">{{this.diseaseID}}</td>
+      <td class="col">{{this.Dname}}</td>
+      <td class="col">{{this.Sname}}</td>
+      <td class="col">{{this.longitude}}</td>
+      <td class="col">{{this.latitude}}</td>
+      <td class="col">{{this.dateTime}}</td>
+    </tr>
+    {{/each}}
+    
+    </table>
+
+  <hr>
+
+
+    <button type="Submit" class="button" id = "button" name="button" height = "25" onclick="alert('Finding the Patient')">Patient-Search</button>
+
+    <button type="Submit" class="button2" id = "button2" name="button2" height = "25" onclick="alert('Counting the people')">Count the people above 20 with Covid</button>
+
+    <button type="Submit" class="button3" id = "button3" name="button3" height = "25" onclick="alert('Your form was submitted')">Count the people with Sypmtoms</button>
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <title>
+        Total Care
+    </title>
+</head>
+
+<body>
+    <div style="width: 75%; margin: auto;">
+        <h1>
+            Total Care
+        </h1>
+        <form action="/" method="post">
+        <div>
+            <h3>
+                Please select a sector:
+            </h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Sections" id="sec1" value="Sec1">
+                <label class="form-check-label" for="sec1">
+                    Sector 1
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Sections" id="sec2" value="Sec2">
+                <label class="form-check-label" for="sec2">
+                    Sector 2
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Sections" id="sec3" value="Sec3">
+                <label class="form-check-label" for="sec3">
+                    Sector 3
+                </label>
+            </div>
+        </div>
+        <div>
+            <h3>
+                Please enter the days:
+            </h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Day1" id="sunday" value="1">
+                <label class="form-check-label" for="Days1">
+                    Sunday
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Day2" id="monday" value="1">
+                <label class="form-check-label" for="Days2">
+                    Monday
+                </label>
+            </div>
+            <div class="form-check disabled">
+                <input class="form-check-input" type="checkbox" name="Day3" id="tuesday" value="1">
+                <label class="form-check-label" for="Days3">
+                    Tuesday
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Day4" id="wednesday" value="1">
+                <label class="form-check-label" for="Days4">
+                    Wednesday
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Day5" id="thursday" value="1">
+                <label class="form-check-label" for="Days5">
+                    Thursday
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Day6" id="friday" value="1">
+                <label class="form-check-label" for="Days6">
+                    Friday
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Day7" id="saturday" value="1">
+                <label class="form-check-label" for="Days7">
+                    Saturday
+                </label>
+            </div>
+            <div>
+                <h3>
+                    Please enter irrigation duration and times:
+                </h3>
+
+                  <div class="form-row">
+                      <div class="col">
+                        <p>Duration in seconds:</p>
+                        <input type="text" class="form-control" placeholder="Duration" id="irrDuration" name="irrDuration">
+                        <p></p>
+                        <p>Time 1:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="irrTime1" name="irrTime1">
+                        <p></p>
+                        <p>Time 2:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="irrTime2" name="irrTime2">
+                        <p></p>
+                        <p>Time 3:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="irrTime3" name="irrTime3">
+                        <p></p>
+                        <p>Time 4:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="irrTime4" name="irrTime4">
+                        <p></p>
+                        <p>Time 5:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="irrTime5" name="irrTime5">
+                        <p></p>
+                        <p>Time 6:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="irrTime6" name="irrTime6">
+                        <p></p>
+                        <p>Time 7:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="irrTime7" name="irrTime7">
+                        <p></p>
+                        <p>Time 8:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="irrTimeirrT" name="irrTime8">
+                        <p></p>
+                      </div>
+                  </div>
+
+            </div>
+            <div>
+                <h3>
+                Please enter fertilization times and duration:
+                </h3>
+
+                <div class="form-row">
+                    <div class="col">
+                        <p>Time 1:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="ferTime1" name="ferTime1">
+                        <p></p>
+                        <input type="text" class="form-control" placeholder="Duration" id="ferDuration1" name="ferDuration1">
+                        <p></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump1" id="Pump1" value="0">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Pump 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump1" id="Pump2" value="1">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Pump 2
+                            </label>
+                        </div>
+                        <p></p>
+                        <p>Time 2:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="ferTime2" name="ferTime2">
+                        <p></p>
+                        <input type="text" class="form-control" placeholder="Duration" id="ferDuration2" name="ferDuration2">
+                        <p></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump2" id="Pump1" value="0">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Pump 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump2" id="Pump2" value="1">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Pump 2
+                            </label>
+                        </div>
+                        <p></p>
+                        <p>Time 3:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="ferTime3" name="ferTime3">
+                        <p></p>
+                        <input type="text" class="form-control" placeholder="Duration" id="ferDuration3" name="ferDuration3">
+                        <p></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump3" id="Pump1" value="0">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Pump 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump3" id="Pump2" value="1">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Pump 2
+                            </label>
+                        </div>
+                        <p></p>
+                        <p>Time 4:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="ferTime4" name="ferTime4">
+                        <p></p>
+                        <input type="text" class="form-control" placeholder="Duration" id="ferDuration4" name="ferDuration4">
+                        <p></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump4" id="Pump1" value="0">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Pump 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump4" id="Pump2" value="1">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Pump 2
+                            </label>
+                        </div>
+                        <p></p>
+                        <p>Time 5:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="ferTime5" name="ferTime5">
+                        <p></p>
+                        <input type="text" class="form-control" placeholder="Duration" id="ferDuration5" name="ferDuration5">
+                        <p></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump5" id="Pump1" value="0">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Pump 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump5" id="Pump2" value="1">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Pump 2
+                            </label>
+                        </div>
+                        <p></p>
+                        <p>Time 6:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="ferTime6" name="ferTime6">
+                        <p></p>
+                        <input type="text" class="form-control" placeholder="Duration" id="ferDuration6" name="ferDuration6">
+                        <p></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump6" id="Pump1" value="0">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Pump 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump6" id="Pump2" value="1">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Pump 2
+                            </label>
+                        </div>
+                        <p></p>
+                        <p>Time 7:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="ferTime7" name="ferTime7">
+                        <p></p>
+                        <input type="text" class="form-control" placeholder="Duration" id="ferDuration7" name="ferDuration7">
+                        <p></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump7" id="Pump1" value="0">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Pump 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump7" id="Pump2" value="1">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Pump 2
+                            </label>
+                        </div>
+                        <p></p>
+                        <p>Time 8:</p>
+                        <input type="text" class="form-control" placeholder="Example: 8:30:00" id="ferTime8" name="ferTime8">
+                        <p></p>
+                        <input type="text" class="form-control" placeholder="Duration" id="ferDuration8" name="ferDuration8">
+                        <p></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump8" id="Pump1" value="0">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Pump 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Pump8" id="Pump2" value="1">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Pump 2
+                            </label>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+          </form>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
