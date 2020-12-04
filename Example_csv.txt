@@ -1,95 +1,97 @@
 (Sector 1)
 (Order of Data in its max length:
-0. Sector Number,
-1. Hour of Upload,
-2. Minute of Upload,
-3. Second of Upload,
-4. Day of Upload,
-5. Month of Upload,
-6. Year of Upload,
+0. Sector Number, 0
+1. Hour of Upload, 1
+2. Minute of Upload,30
+3. Second of Upload, 45
+4. Day of Upload,6
+5. Month of Upload,12
+6. Year of Upload,2020
 (Irrigation data starts here)
-7. Hour of irrigation 1,
-8. Hour of irrigation 2,
-9. Hour of irrigation 3,
-10.Hour of irrigation 3,
-11.Hour of irrigation 4,
-12.Hour of irrigation 5,
-13.Hour of irrigation 6,
-14.Hour of irrigation 7,
-15.Hour of irrigation 8,
-16.Minute of irrigation 1,
-17.Minute of irrigation 2,
-18.Minute of irrigation 3,
-19.Minute of irrigation 4,
-20.Minute of irrigation 5,
-21.Minute of irrigation 6,
-22.Minute of irrigation 7,
-23.Minute of irrigation 8,
-24.Second of irrigation 1,
-25.Second of irrigation 2,
-26.Second of irrigation 3,
-27.Second of irrigation 4,
-28.Second of irrigation 5,
-29.Second of irrigation 6,
-30.Second of irrigation 7,
-31.Second of irrigation 8,
-32.Irrigation day 1,
-33.Irrigation day 2,
-33.Irrigation day 3,
-34.Irrigation day 4,
-35.Irrigation day 5,
-36.Irrigation day 6,
-37.Irrigation day 7,
-38.Irrigation duration,
+7. Hour of irrigation 1,8
+8. Hour of irrigation 2,5
+9. Hour of irrigation 3,1
+10.
+11.Hour of irrigation 4,-1
+12.Hour of irrigation 5,-1
+13.Hour of irrigation 6,-1
+14.Hour of irrigation 7,-1
+15.Hour of irrigation 8,-1
+16.Minute of irrigation 1,30
+17.Minute of irrigation 2,00
+18.Minute of irrigation 3,40
+19.Minute of irrigation 4,-1
+20.Minute of irrigation 5,-1
+21.Minute of irrigation 6,-1
+22.Minute of irrigation 7,-1
+23.Minute of irrigation 8,-1
+24.Second of irrigation 1,10
+25.Second of irrigation 2,15
+26.Second of irrigation 3,30
+27.Second of irrigation 4,-1
+28.Second of irrigation 5,-1
+29.Second of irrigation 6,-1
+30.Second of irrigation 7,-1
+31.Second of irrigation 8,-1
+32.Irrigation day 1,0
+33.Irrigation day 2,1
+33.Irrigation day 3,0
+34.Irrigation day 4,1
+35.Irrigation day 5,0
+36.Irrigation day 6,1
+37.Irrigation day 7,0
+38.Irrigation duration,15
 (Irrigation data starts here)
-39.Hour of fertilization 1,
-40.Hour of fertilization 2,
-41.Hour of fertilization 3,
-42.Hour of fertilization 4,
-43.Hour of fertilization 5,
-44.Hour of fertilization 6,
-45.Hour of fertilization 7,
-46.Hour of fertilization 8,
-47.Minute of fertilization 1,
-48.Minute of fertilization 2,
-49.Minute of fertilization 3,
-50.Minute of fertilization 4,
-51.Minute of fertilization 5,
-52.Minute of fertilization 6,
-53.Minute of fertilization 7,
-54.Minute of fertilization 8,
-55.Second of fertilization 1,
-56.Second of fertilization 2,
-57.Second of fertilization 3,
-58.Second of fertilization 4,
-59.Second of fertilization 5,
-60.Second of fertilization 6,
-61.Second of fertilization 7,
-62.Second of fertilization 8,
-63.Fertilization duration 1,
-64.Fertilization duration 2,
-65.Fertilization duration 3,
-66.Fertilization duration 4,
-67.Fertilization duration 5,
-68.Fertilization duration 6,
-69.Fertilization duration 7,
-70.Fertilization duration 8,
-71.Fertilization pump 1,
-72.Fertilization pump 2,
-73.Fertilization pump 3,
-74.Fertilization pump 4,
-75.Fertilization pump 5,
-76.Fertilization pump 6,
-77.Fertilization pump 7,
-78.Fertilization pump 8,
-79.Fertilization day 1,
-80.Fertilization day 2,
-81.Fertilization day 3,
-82.Fertilization day 4,
-83.Fertilization day 5,
-84.Fertilization day 6,
-85.Fertilization day 7,
-86.Fertilization day 8/n
+39.Hour of fertilization 1,9
+40.Hour of fertilization 2,6
+41.Hour of fertilization 3,2
+42.Hour of fertilization 4,-1
+43.Hour of fertilization 5,-1
+44.Hour of fertilization 6,-1
+45.Hour of fertilization 7,-1
+46.Hour of fertilization 8,-1
+47.Minute of fertilization 1,00
+48.Minute of fertilization 2,15
+49.Minute of fertilization 3,10
+50.Minute of fertilization 4,-1
+51.Minute of fertilization 5,-1
+52.Minute of fertilization 6,-1
+53.Minute of fertilization 7,-1
+54.Minute of fertilization 8,-1
+55.Second of fertilization 1,13
+56.Second of fertilization 2,20
+57.Second of fertilization 3,26
+58.Second of fertilization 4,-1
+59.Second of fertilization 5,-1
+60.Second of fertilization 6,-1
+61.Second of fertilization 7,-1
+62.Second of fertilization 8,-1
+63.Fertilization duration 1,10
+64.Fertilization duration 2,5
+65.Fertilization duration 3,20
+66.Fertilization duration 4,-1
+67.Fertilization duration 5,-1
+68.Fertilization duration 6,-1
+69.Fertilization duration 7,-1
+70.Fertilization duration 8,-1
+71.Fertilization pump 1,0
+72.Fertilization pump 2,1
+73.Fertilization pump 3,1
+74.Fertilization pump 4,-1
+75.Fertilization pump 5,-1
+76.Fertilization pump 6,-1
+77.Fertilization pump 7,-1
+78.Fertilization pump 8,-1
+79.Fertilization day 1,0
+80.Fertilization day 2,0
+81.Fertilization day 3,1
+82.Fertilization day 4,0
+83.Fertilization day 5,1
+84.Fertilization day 6,0
+85.Fertilization day 7,0/
+
+Here:
+0,1,30,45,6,12,2020,8,5,1,-1,-1,-1,-1,-1,30,00,40,-1,-1,-1,-1,-1,10,15,30,-1,-1,-1,-1,-1,0,1,0,1,0,1,0,15,9,6,2,-1,-1,-1,-1,-1,00,15,10,-1,-1,-1,-1,-1,13,20,26,-1,-1,-1,-1,-1,10,5,20,-1,-1,-1,-1,-1,0,1,1,-1,-1,-1,-1,-1,0,0,1,0,1,0,0/
 )
 
 (Sector 2)
@@ -183,7 +185,9 @@
 83.Fertilization day 5,
 84.Fertilization day 6,
 85.Fertilization day 7,
-86.Fertilization day 8/n
+86.Fertilization day 8/
+
+1,
 )
 
 (Sector 3)
@@ -277,5 +281,5 @@
 83.Fertilization day 5,
 84.Fertilization day 6,
 85.Fertilization day 7,
-86.Fertilization day 8/n
+86.Fertilization day 8/
 )
