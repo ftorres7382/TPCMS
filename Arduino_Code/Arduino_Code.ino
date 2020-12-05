@@ -57,7 +57,7 @@ int pump_pin [PUMP_COUNT] = {5,6};
 void setup()
 {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(19200);
   loadSchedule();
   setTime(startTime[0], startTime[1], startTime[2], startTime[3], startTime[4], startTime[5]); //hour, minute, second, day, month, year
   //set valve pin modes
@@ -129,15 +129,17 @@ void printDigits(int digits)
 void loadSchedule()
 {
   //The data must come in as a csv, where \n delimits the sectors
-  //
   while(Serial.available() <= 0)
   {}
   //Stores incoming Serial Data
   String data = Serial.readString();
   char str [data.length()];
+  
+  
 
   data.toCharArray(str, data.length());
-
+  delay(300);
+  Serial.println("Start");
   const char s1[2]=",";
   char *token;
 
@@ -150,7 +152,6 @@ void loadSchedule()
   int i=0;
   while(token != NULL)
   {
-    Serial.println(token);
     data_array[0][i] = String(token).toInt();
     // Serial.println("Saving...");
     // Serial.println(data_array[0][i]);
@@ -159,12 +160,12 @@ void loadSchedule()
     i++;
   }
   i=0;
-  Serial.println("Before Printing");
-  while(data_array[0][i] != -2)
-  {
-    // Serial.println(data_array[0][i]);
-    i++;
-  }
+//  Serial.println("Before Printing");
+//  while(data_array[0][i] != -2)
+//  {
+//    // Serial.println(data_array[0][i]);
+//    i++;
+//  }
 
   i=0;
   int sector = data_array[0][0];
@@ -256,11 +257,11 @@ void loadSchedule()
   }
   for(int j=0; j<7; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+     Serial.println("Stored Values");
+     Serial.println(data_array[sector][i]);
     fer_days[sector][j] = data_array[sector][i];
-    // Serial.println("Fer Days:");
-    // Serial.println(fer_days[sector][j]);
+     Serial.println("Fer Days:");
+     Serial.println(fer_days[sector][j]);
   }
 }
 
