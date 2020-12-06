@@ -10,15 +10,13 @@ router.get('/', async function (req, res, next){
 
 })
 router.post('/', async function (req, res, next) {
-// console.log(req.body);
+
 
 var prints;
 const python = spawn('python', ['./pythonScripts/loadSchedule.py', JSON.stringify(req.body)]);
 python.stdout.on('data', function (data) {
-  console.log(`${data}`);
  });
  python.on('close', (code) => {
-   console.log(`child process exited with code ${code}`);
  });
 
 res.render('index/index');

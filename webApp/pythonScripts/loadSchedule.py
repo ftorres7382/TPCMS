@@ -8,15 +8,9 @@ ahora = datetime.now()
 currentTime = ahora.strftime("%H:%M:%S")
 hoy = str(date.today())
 data = json.loads(sys.argv[1])
-# data = {"Sections":"0","Day2":"1","Day4":"1","Day6":"1","irrDuration":"15","irrTime1":"8:30:10","irrTime2":"5:00:15","irrTime3":"1:40:30","irrTime4":"","irrTime5":"","irrTime6":"","irrTime7":"","irrTime8":"","ferTime1":"9:00:13","ferDuration1":"10","Pump1":"0","ferTime2":"6:15:20","ferDuration2":"5","Pump2":"1","ferTime3":"2:10:26","ferDuration3":"20","Pump3":"1","ferTime4":"","ferDuration4":"","ferTime5":"","ferDuration5":"","ferTime6":"","ferDuration6":"","ferTime7":"","ferDuration7":"","ferTime8":"","ferDuration8":""}
 
 for x in data:
     data[x] = str(data[x])
-    # print(x + ":")
-    # print(data[x])
-
-# print(data)
-
 
 for i in data:
     if data[i] == "":
@@ -78,20 +72,6 @@ superStr += data["ferDuration1"] + "," + data["ferDuration2"] + "," + data["ferD
 data["Pump1"] + "," + data["Pump2"] + "," + data["Pump3"] + "," + data["Pump4"] + "," + data["Pump5"] + "," + data["Pump6"] + "," + data["Pump7"] + "," + data["Pump8"] + "," +\
 data["Day1"] + "," + data["Day2"] + "," + data["Day3"] + "," + data["Day4"] + "," + data["Day5"] + "," + data["Day6"] + "," + data["Day7"] + ","
 
-print(superStr)
-
-
 ser = serial.Serial(COMPORT, baudrate = 9600, timeout = .1)
 
 ser.write(bytes(superStr))
-
-
-#
-# while True:
-#     data = 0
-#     ser.write(bytes(superStr))
-#
-#     while not data:
-#
-#         data = ser.read_until("\n").decode('ascii')        # reading the info from arduino and decoding it (ascii)
-#         print(data)

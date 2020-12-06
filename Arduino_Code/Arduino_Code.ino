@@ -80,21 +80,16 @@ void loop()
   int fer_index = -1;
 
   checkEvent(&event, &event_valve, &fer_index);
-  digitalClockDisplay();
-  Serial.println(event);
-  Serial.println(event_valve);
   switch(event)
   {
     case 1: //Irrigation Start
             irrigationStart(event_valve);
-            Serial.println("Irrigation Started");
             break;
     case 2: //Fertilization
             fertilization(event_valve, fer_index);
             break;
     case 3: //End irrigation
             irrigationEnd(event_valve);
-            Serial.println("Irrigation Ended");
             break;
   }
   delay(999);
@@ -128,7 +123,7 @@ void printDigits(int digits)
 //Laods the schedule variables irrigation hours, minutes, days and duration as well as the fertilization times and durations.
 void loadSchedule()
 {
-  //The data must come in as a csv, where \n delimits the sectors
+  //The data must come in as a csv, where \ delimits the sectors
   while(Serial.available() <= 0)
   {}
   //Stores incoming Serial Data
@@ -153,126 +148,87 @@ void loadSchedule()
   while(token != NULL)
   {
     data_array[0][i] = String(token).toInt();
-    // Serial.println("Saving...");
-    // Serial.println(data_array[0][i]);
     data_array[0][i+1] = -2;
     token = strtok(NULL, s1);
     i++;
   }
-  i=0;
-//  Serial.println("Before Printing");
-//  while(data_array[0][i] != -2)
-//  {
-//    // Serial.println(data_array[0][i]);
-//    i++;
-//  }
 
   i=0;
   int sector = data_array[0][0];
   i++;
   for(int j=0; j<sizeof(startTime)/sizeof(startTime[0]); i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     startTime[j] = data_array[sector][i];
-    // Serial.println("Start Time");
-    // Serial.println(startTime[j]);
+
   }
   for(int j=0; j<IRR_SIZE; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     irr_hours[sector][j] = data_array[sector][i];
-    // Serial.println("Irr Hours:");
-    // Serial.println(irr_hours[sector][j]);
+
   }
   for(int j=0; j<IRR_SIZE; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     irr_minutes[sector][j] = data_array[sector][i];
-    // Serial.println("Irr Minutes:");
-    // Serial.println(irr_minutes[sector][j]);
+
   }
   for(int j=0; j<IRR_SIZE; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     irr_seconds[sector][j] = data_array[sector][i];
-    // Serial.println("Irr Seconds:");
-    // Serial.println(irr_seconds[sector][j]);
+
   }
   for(int j=0; j<7; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     irr_days[sector][j] = data_array[sector][i];
-    // Serial.println("Irr Days:");
-    // Serial.println(irr_days[sector][j]);
+
   }
   irr_duration = data_array[sector][i];
   i++;
-  // Serial.println("irr_duration");
-  // Serial.println(irr_duration);
+
 
   for(int j=0; j<FER_SIZE; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     fer_hours[sector][j] = data_array[sector][i];
-    // Serial.println("Fer Hours:");
-    // Serial.println(fer_hours[sector][j]);
+
   }
   for(int j=0; j<FER_SIZE; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     fer_minutes[sector][j] = data_array[sector][i];
-    // Serial.println("Fer Minutes:");
-    // Serial.println(fer_minutes[sector][j]);
+
   }
   for(int j=0; j<FER_SIZE; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     fer_seconds[sector][j] = data_array[sector][i];
-    // Serial.println("Fer Seconds:");
-    // Serial.println(fer_seconds[sector][j]);
+
   }
   for(int j=0; j<FER_SIZE; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     fer_duration[sector][j] = data_array[sector][i];
-    // Serial.println("Fer Duration:");
-    // Serial.println(fer_duration[sector][j]);
+
   }
   for(int j=0; j<FER_SIZE; i++, j++)
   {
-    // Serial.println("Stored Values");
-    // Serial.println(data_array[sector][i]);
+
     fer_pump[sector][j] = data_array[sector][i];
-    // Serial.println("Fer Pumps:");
-    // Serial.println(fer_pump[sector][j]);
+
   }
   for(int j=0; j<7; i++, j++)
   {
-     Serial.println("Stored Values");
-     Serial.println(data_array[sector][i]);
+
     fer_days[sector][j] = data_array[sector][i];
-     Serial.println("Fer Days:");
-     Serial.println(fer_days[sector][j]);
+
   }
 }
 
-// serial print variable type
-void types(String a) { Serial.println("it's a String"); }
-void types(int a) { Serial.println("it's an int"); }
-void types(char *a) { Serial.println("it's a char*"); }
-void types(float a) { Serial.println("it's a float"); }
-void types(bool a) { Serial.println("it's a bool"); }
-
-//Checks for events that signal wether is is time or day for an event
+//Checks for events that signal whether is is time or day for an event
 //If there is an event it will identify which valves have that event
 void checkEvent(int *event, int *event_valve, int *event_index)
 {
@@ -394,16 +350,12 @@ void fertilization(int valve, int fer_index)
 {
   digitalWrite(valve_pin[valve], HIGH);
   digitalWrite(pump_pin[fer_pump[valve][fer_index]], HIGH);
-  Serial.println("Fertilization Started in pump:");
-  Serial.println(fer_pump[valve][fer_index]);
 
   delay(fer_duration[valve][fer_index] * 1000);
 
   digitalWrite(pump_pin[fer_pump[valve][fer_index]], LOW);
-  Serial.println("Fertilization STOPPED");
 
   delay(RINSE_TIME * 1000);
 
   digitalWrite(valve_pin[valve], LOW);
-  Serial.println("Rinse has STOPPED");
 }
