@@ -13,7 +13,7 @@ router.post('/', async function (req, res, next) {
 // console.log(req.body);
 
 var prints;
-const python = spawn('python', ['./pythonScripts/loadSchedule.py', JSON.stringify(req.body)]);
+const python = spawn('python3', ['./pythonScripts/loadSchedule.py', JSON.stringify(req.body)]);
 python.stdout.on('data', function (data) {
   console.log(`${data}`);
  });

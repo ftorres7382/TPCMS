@@ -3,10 +3,11 @@ import sys
 import json
 import serial
 import time
-COMPORT = '/dev/ttyACM0'
+COMPORT = '/dev/ttyACM1'
 ahora = datetime.now()
 currentTime = ahora.strftime("%H:%M:%S")
 hoy = str(date.today())
+# print(sys.argv[1])
 data = json.loads(sys.argv[1])
 # data = {"Sections":"0","Day2":"1","Day4":"1","Day6":"1","irrDuration":"15","irrTime1":"8:30:10","irrTime2":"5:00:15","irrTime3":"1:40:30","irrTime4":"","irrTime5":"","irrTime6":"","irrTime7":"","irrTime8":"","ferTime1":"9:00:13","ferDuration1":"10","Pump1":"0","ferTime2":"6:15:20","ferDuration2":"5","Pump2":"1","ferTime3":"2:10:26","ferDuration3":"20","Pump3":"1","ferTime4":"","ferDuration4":"","ferTime5":"","ferDuration5":"","ferTime6":"","ferDuration6":"","ferTime7":"","ferDuration7":"","ferTime8":"","ferDuration8":""}
 
@@ -79,11 +80,27 @@ data["Pump1"] + "," + data["Pump2"] + "," + data["Pump3"] + "," + data["Pump4"] 
 data["Day1"] + "," + data["Day2"] + "," + data["Day3"] + "," + data["Day4"] + "," + data["Day5"] + "," + data["Day6"] + "," + data["Day7"] + ","
 
 print(superStr)
+# str = "0,16,00,06,06,12,2020,16,-1,-1,-1,-1,-1,-1,-1,00,-1,-1,-1,-1,-1,-1,-1,15,-1,-1,-1,-1,-1,-1,-1,1,0,0,0,0,0,0,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,0,0,0,0,0,0,\n"
 
 
-ser = serial.Serial(COMPORT, baudrate = 9600, timeout = .1)
+ser = serial.Serial()
+ser.port = COMPORT
+ser.baudrate = 9600
+ser.timeout = 1
+ser.setDTR(False)
+ser.open()
+time.sleep(2)
+ser.reset_input_buffer()
 
-ser.write(bytes(superStr))
+# ser.write(bytes(superStr))
+ser.write(bytes(superStr, 'ascii'))
+
+time.sleep(1)
+
+arduinoData = ser.read_until().decode('ascii')
+
+print("Data")
+print(arduinoData)
 
 
 #
